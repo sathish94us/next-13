@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
 export default async function BlogSlug({ params }: { params: { slug: string } }) {
     const slug = params.slug;
-    console.log('slug: ', slug);
+    console.log('Blog slug: ', slug);
     const data = await getData(slug);
     return <h1>BlogSlug: {data}</h1>;
 }

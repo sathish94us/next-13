@@ -1,5 +1,7 @@
 'use client';
 
+import { Metadata } from "next";
+
 // Return a list of `params` to populate the [slug] dynamic segment
 export function generateStaticParams() {
     console.log('generateStaticParams CollectionSlug');
@@ -14,9 +16,16 @@ async function getData(value: string): Promise<string> {
     })
 }
 
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+    return {
+        title: 'Collection Test Dynamic ' + params.slug,
+        description: 'Collection Test Dynamic Description : ' + params.slug
+    }
+}
+
 export default async function CollectionSlug({params}: {params: { slug: string }}) {
     const slug = params.slug;
-    console.log('slug: ', slug);
+    console.log('Collection slug: ', slug);
     const data = await getData(slug);
     return <h1>CollectionSlug: {data}</h1>;
 }
