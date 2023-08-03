@@ -4,7 +4,7 @@ export function generateStaticParams() {
     return [1, 2, 3, 4, 5].map(number => ({slug: number + ''}));
 }
 
-export async function getData(value: string): Promise<string> {
+async function getData(value: string): Promise<string> {
     return new Promise((res) => {
         setTimeout(() => {
             res(`Promise ${value}`);
