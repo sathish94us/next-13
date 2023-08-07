@@ -1,5 +1,3 @@
-'use client';
-
 import { Metadata } from "next";
 
 // Return a list of `params` to populate the [slug] dynamic segment
