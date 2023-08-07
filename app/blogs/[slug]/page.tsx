@@ -14,13 +14,6 @@ async function getData(value: string): Promise<string> {
     })
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-    return {
-        title: 'Blog Test Dynamic ' + params.slug,
-        description: 'Blog Test Dynamic Description : ' + params.slug
-    }
-}
-
 export default async function BlogSlug({ params }: { params: { slug: string } }) {
     const slug = params.slug;
     console.log('Blog slug: ', slug);
