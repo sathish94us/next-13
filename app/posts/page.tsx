@@ -9,6 +9,7 @@ async function getPosts() {
 }
 
 export default async function Posts() {
+  console.log('Posts')
   const dog = await getPosts();
   return (
     <>
