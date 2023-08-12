@@ -1,14 +1,14 @@
 import Image from "next/image";
 
 const getDog = async () => {
-  console.log('getDog Dog 1')
-    const res = await fetch('https://dog.ceo/api/breeds/image/random');
+  console.log('getDog Dog 2')
+    const res = await fetch('https://dog.ceo/api/breeds/image/random', { cache: 'no-store' });
     const data = await res.json();
     return data.message;
 }
 
 export default async function Dog() {
-  console.log('Dog 1')
+  console.log('Dog 2')
     const dog = await getDog();
   return <>
     <h1>Dog</h1>
