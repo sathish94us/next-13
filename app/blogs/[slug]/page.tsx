@@ -32,6 +32,7 @@ export function generateStaticParams() {
 }
 
 async function getData(value: string): Promise<string> {
+    console.log('getData Blog')
     const res = await fetch('https://jsonplaceholder.typicode.com/todos/' + value, { next: { revalidate: 3 } });
     const data = await res.json();
     return data.title;
