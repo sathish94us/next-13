@@ -10,6 +10,6 @@ export default async function Home() {
     const dog = await getDog();
   return <>
     <h1>Dog</h1>
-    <Image src={dog} alt="dog" />
+    <Image src={dog} alt="dog" width={500} height={500} />
   </>
 }
