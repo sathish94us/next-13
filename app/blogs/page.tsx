@@ -1,3 +1,4 @@
 export default function Blog() {
-  return <h1>Blog</h1>;
+  console.log('Blogs')
+  return <h1>Blog {Date.now()}</h1>;
 }
