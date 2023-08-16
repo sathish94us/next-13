@@ -5,14 +5,13 @@ export default function Home() {
   console.log('Home')
   return <>
   <h1>Home</h1>
-  <Link href="/posts">Posts &nbsp;</Link>
-  <Link href="/blogs">Blogs &nbsp;</Link>
-  <Link href="/collection">Collection &nbsp;</Link>
-  <Link href="/blogs/1">Blogs Slug 1 &nbsp;</Link>
-  <Link href="/blogs/123">Blogs Slug 123 &nbsp;</Link>
-  <Link href="/collection/123">Collection Slug &nbsp;</Link>
-  <Link href="/collection/123">Collection Slug 1 &nbsp;</Link>
-  <Link href="/collection/123">Collection Slug 123 &nbsp;</Link>
-  <Link href="/client">Client &nbsp;</Link>
+  <Link href="/posts" prefetch={false}>Posts &nbsp;</Link>
+  <Link href="/blogs" prefetch={false}>Blogs &nbsp;</Link>
+  <Link href="/collection" prefetch={false}>Collection &nbsp;</Link>
+  <Link href="/blogs/1" prefetch={false}>Blogs Slug 1 &nbsp;</Link>
+  <Link href="/blogs/123" prefetch={false}>Blogs Slug 123 &nbsp;</Link>
+  <Link href="/collection/1">Collection Slug 1&nbsp;</Link>
+  <Link href="/collection/123" prefetch={false}>Collection Slug 123 &nbsp;</Link>
+  <Link href="/client" prefetch={false}>Client &nbsp;</Link>
   </>
 }
