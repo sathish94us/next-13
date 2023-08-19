@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Links from "../components/links";
 
 const getDog = async () => {
   console.log('getDog Dog 2')
@@ -13,5 +14,6 @@ export default async function Dog() {
   return <>
     <h1>Dog</h1>
     <Image src={dog} alt="dog" width={500} height={500} />
+    <Links />
   </>
 }

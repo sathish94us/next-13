@@ -1,6 +1,7 @@
 'use client';
 import useStore from "../store";
 import { useEffect } from "react";
+import Links from "../components/links";
 
 export default function Client() {
   const counter = useStore((state: any) => state.counter);
@@ -15,6 +16,7 @@ export default function Client() {
       <h1>Client: {counter}</h1>
       <button onClick={increment}>Increment</button>
       <button onClick={decrement}>Decrement</button>
+      <Links />
     </>
   );
 }

@@ -23,6 +23,7 @@
 
 
 // Check for generateStaticParams page are created automatically when revalidateTime expires or page creation happens at request time
+import Links from "@/app/components/links";
 import { Metadata } from "next";
 
 // Return a list of `params` to populate the [slug] dynamic segment
@@ -42,5 +43,7 @@ export default async function BlogSlug({ params }: { params: { slug: string } })
     const slug = params.slug;
     console.log('Blog slug: ', slug);
     const data = await getData(slug);
-    return <h1>BlogSlug: {data}</h1>;
+    return <>
+        <h1>BlogSlug: {data}</h1>
+        <Links /></>;
 }

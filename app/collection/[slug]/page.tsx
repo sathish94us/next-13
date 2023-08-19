@@ -1,3 +1,4 @@
+import Links from "@/app/components/links";
 import { Metadata } from "next";
 
 // Return a list of `params` to populate the [slug] dynamic segment
@@ -25,5 +26,8 @@ export default async function CollectionSlug({params}: {params: { slug: string }
     const slug = params.slug;
     console.log('Collection slug: ', slug);
     const data = await getData(slug);
-    return <h1>CollectionSlug: {data}</h1>;
+    return <>
+    <h1>CollectionSlug: {data}</h1>
+    <Links />
+    </>;
 }

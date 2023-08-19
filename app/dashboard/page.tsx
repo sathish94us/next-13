@@ -25,6 +25,7 @@
 
 
 // When using dynamic rendering, the client component will be both statically rendered and client rendered
+import Links from '../components/links'
 import SearchBar from './search-bar'
  
 export const dynamic = 'force-dynamic'
@@ -36,6 +37,7 @@ export default function Page() {
         <SearchBar />
       </nav>
       <h1>Dashboard</h1>
+      <Links />
     </>
   )
 }

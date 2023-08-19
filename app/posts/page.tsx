@@ -1,3 +1,5 @@
+import Links from "../components/links";
+
 async function getPosts() {
   const response = await fetch("https://dog.ceo/api/breeds/image/random", {
     next: {
@@ -15,6 +17,7 @@ export default async function Posts() {
     <>
       <h1>Posts</h1>
       <img src={dog.message} />
+      <Links />
     </>
   );
 }
