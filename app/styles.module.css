@@ -1,0 +1,7 @@
+.container {}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        background-color: rgb(54, 49, 49);
+    }
+}
